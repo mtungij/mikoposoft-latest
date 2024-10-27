@@ -92,14 +92,14 @@ use function Livewire\Volt\{state};
 
 
                 <li class="slide">
-                    <a href="{{ route('dashboard') }}" class="side-menu__item">
+                    <a href="{{ route('dashboard') }}" class="side-menu__item" wire:navigate>
                         <i class="bx bx-store-alt side-menu__icon"></i>
                         <span class="side-menu__label">Dashboard</span>
                     </a>
                 </li>
 
                 <li class="slide">
-                    <a href="{{route('profile')}}" class="side-menu__item">
+                    <a href="{{route('profile')}}" class="side-menu__item" wire:navigate>
                         <i class="bx bx-store-alt side-menu__icon"></i>
                         <span class="side-menu__label">Profile</span>
                     </a>
