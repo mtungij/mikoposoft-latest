@@ -132,7 +132,7 @@ use function Livewire\Volt\{state};
                             </ul>
                         </li>
                         <li class="slide">
-                            <a href="chat.html" class="side-menu__item">Chat</a>
+                            <a href="{{ route('dashboard') }}" class="side-menu__item">Chat</a>
                         </li>
                         <li class="slide"><a href="contacts.html" class="side-menu__item">Contacts</a></li>
                         <li class="slide"><a href="contact-us.html" class="side-menu__item">Contact Us</a></li>

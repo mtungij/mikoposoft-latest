@@ -29,6 +29,13 @@
     <!-- Color Picker CSS -->
     <link rel="stylesheet" href="{{ asset('theme/dist/assets/libs/@simonwep/pickr/themes/nano.min.css') }}">
 
+    
+<!-- Choices Css -->
+<link rel="stylesheet" href="{{asset('theme/dist/assets/libs/choices.js/public/assets/styles/choices.min.css')}}">
+
+<!-- Tom Select Css -->
+<link rel="stylesheet" href="{{asset('theme/dist/assets/libs/tom-select/css/tom-select.default.min.css')}}">
+
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -464,23 +471,17 @@
     </div>
     <!-- Loader -->
 
-    
-<div class="w-full">
-        <div class="flex items-start text-zinc-500 dark:text-zinc-400 min-h-screen bg-zinc-100 ">
-            <aside class="sticky top-0   text-zinc-300   border-r dark:border-zinc-700">
-                <div class="sticky top-0 h-16  "> Logo</div>
-                <div class="px-3 py-4">
-                    <nav>
-                        <livewire:layout.sidebar />
-                    </nav>
-                </div>
-            </aside>
+ <div class="page">
+        <div class="flex items-start text-zinc-500  min-h-screen ">
+            
+                <livewire:layout.sidebar />
+                   
             <div class="page">
             <div class="grid w-full">
                 <livewire:layout.navigation />
                 <!-- Page Heading -->
                 @if (isset($header))
-                    <header class="bg-white dark:bg-zinc-800 shadow">
+                    <header class=" shadow">
                         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                             {{ $header }}
                         </div>
@@ -495,6 +496,19 @@
             </div>
         </div>
     </div>
+
+    <footer class="footer mt-auto xl:ps-[15rem]  font-normal font-inter bg-white text-defaultsize leading-normal text-[0.813] shadow-[0_0_0.4rem_rgba(0,0,0,0.1)] dark:bg-bodybg py-4 text-center">
+    <div class="container">
+        <span class="text-gray dark:text-defaulttextcolor/50"> Copyright © <span id="year"></span> <a
+                href="javascript:void(0);" class="text-defaulttextcolor font-semibold dark:text-defaulttextcolor">Ynex</a>.
+            Designed with <span class="bi bi-heart-fill text-danger"></span> by <a href="javascript:void(0);">
+                <span class="font-semibold text-primary underline">Spruko</span>
+            </a> All
+            rights
+            reserved
+        </span>
+    </div>
+</footer>
     </div>
     <x-toaster-hub />
 
@@ -532,6 +546,12 @@
     <script src="{{ asset('theme/dist/assets/libs/chart.js/chart.min.js') }}"></script>
     <script src="{{ asset('theme/dist/assets/js/crm-dashboard.js') }}"></script>
     <script src="{{ asset('theme/dist/assets/js/custom-switcher.js') }}"></script>
+        <!-- Choices JS -->
+        <script src="{{asset('theme/dist/assets/libs/choices.js/public/assets/scripts/choices.min.js')}}"></script>
+
+<!-- Mail Settings -->
+
+ <script src="{{asset('theme/dist/assets/js/mail-settings.js')}}"></script>
     <script src="{{ asset('theme/dist/assets/js/custom.js') }}"></script>
 
 </body>

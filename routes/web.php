@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Settings\Profile;
 use App\Livewire\Users;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
@@ -13,6 +14,12 @@ Route::view('dashboard', 'dashboard')
     ->name('dashboard');
 
 Route::view('profile', 'profile')
+    ->middleware(['auth'])
+    ->name('profile');
+
+
+ 
+    Route::get('profile', Profile::class)
     ->middleware(['auth'])
     ->name('profile');
 

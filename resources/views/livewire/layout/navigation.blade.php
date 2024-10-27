@@ -688,7 +688,7 @@ $logout = function (Logout $logout) {
 
                     <button id="dropdown-profile" type="button"
                         class="hs-dropdown-toggle ti-dropdown-toggle !gap-2 !p-0 flex-shrink-0 sm:me-2 me-0 !rounded-full !shadow-none text-xs align-middle !border-0 !shadow-transparent ">
-                        <img class="inline-block rounded-full " src="../assets/images/faces/9.jpg" width="32"
+                        <img class="inline-block rounded-full " src="{{asset('theme/dist/assets/images/user.png')}}" width="32"
                             height="32" alt="Image Description">
                     </button>
                     <div class="md:block hidden dropdown-profile">
@@ -702,7 +702,7 @@ $logout = function (Logout $logout) {
                         <ul class="text-defaulttextcolor font-medium dark:text-[#8c9097] dark:text-white/50">
                             <li>
                                 <a class="w-full ti-dropdown-item !text-[0.8125rem] !gap-x-0  !p-[0.65rem] !inline-flex"
-                                    href="profile.html">
+                                    href="{{route('profile')}}">
                                     <i class="ti ti-user-circle text-[1.125rem] me-2 opacity-[0.7]"></i>Profile
                                 </a>
                             </li>
@@ -729,7 +729,7 @@ $logout = function (Logout $logout) {
                                     href="chat.html"><i
                                         class="ti ti-headset text-[1.125rem] me-2 opacity-[0.7]"></i>Support</a></li>
                             <li><a class="w-full ti-dropdown-item !text-[0.8125rem] !p-[0.65rem] !gap-x-0 !inline-flex"
-                                    href="sign-in-cover.html"><i
+                            wire:click="logout"><i
                                         class="ti ti-logout text-[1.125rem] me-2 opacity-[0.7]"></i>Log Out</a></li>
                         </ul>
                     </div>
